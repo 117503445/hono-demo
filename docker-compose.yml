@@ -1,0 +1,14 @@
+services:
+  hono-demo-dev:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    volumes:
+        - ./:/workspace
+        - hono-demo-dev-vsc:/root/.vscode-server
+    stdin_open: true
+    tty: true
+    init: true
+
+volumes:
+  hono-demo-dev-vsc:
